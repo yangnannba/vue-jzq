@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>井字棋</h1>
-    <div class="refresh" @click="refresh"><img src="./assets/images/refresh.png" /></div>
+    <div class="refresh" @click.prevent="refresh"><img src="./assets/images/refresh.png" /></div>
     <div class="jzq">
 
       <cell @fucell="bian(0,$event)" :n="n"  ref="cell1"></cell>
