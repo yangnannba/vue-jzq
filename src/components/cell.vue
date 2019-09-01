@@ -1,6 +1,6 @@
 <template>
 
-    <div class="cell" @click="xiaqi">
+    <div class="cell" @click="xiaqi" :class="{huang:text==='x',lv:text==='o'}">
         <template v-if="show">{{text}}</template>
         <template v-else></template>
     </div>
@@ -41,10 +41,16 @@ export default {
     text-align: center;
     line-height: 4rem;
     text-transform: uppercase;
-    color: #fbd164;
+
     text-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.3);
     font-weight: bold;
     border:0.2rem solid #d0b56e;
 
+}
+.huang{
+    color: #fbd164;
+}
+.lv{
+    color:#71d456;
 }
 </style>
